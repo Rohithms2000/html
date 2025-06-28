@@ -1,0 +1,211 @@
+<!-- Table -->
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+
+		table,th,td{
+			padding: 5px;
+			font-family: "trebuchet", sans-serif;
+			font-size: small;
+			margin: 20px 40px ;
+			background-color: gray;
+			color: white;
+			border: 1px solid black;
+			border-collapse: collapse;
+			width: 65%;
+		}
+		th{
+			font-size: larger;
+			font-weight: 700;
+			height: 40px;
+			text-align: center;
+			width: 50px;
+		}
+		td{
+			text-align: center;
+			height: 25px;
+			width: 80px;
+		}
+		td.price{
+			text-align: right;
+		}
+
+	</style>
+</head>
+<body>
+
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Prorduct Name</th>
+    <th>Product Price</th>
+  </tr>
+  <tr>
+    <td>ITN-003</td>
+    <td>Laptop Asus Rog G16</td>
+    <td class="price">Rs. 1,49,999.000</td>
+  </tr>
+  <tr>
+    <td>ITN-012</td>
+    <td>Boat Rockers headphone</td>
+    <td class="price">Rs. 3,599.000</td>
+  </tr>
+  <tr>
+    <td>ITN-563</td>
+    <td>Wireless Keyboard and Mouse Combo</td>
+    <td class="price">Rs. 2,000.000</td>
+  </tr>
+  <tr>
+    <td>ITN-158s</td>
+    <td>Sandisk Pendrive 32 GB</td>
+    <td class="price">Rs. 1,099.000</td>
+  </tr>
+  <tr>
+    <td>ITP-669</td>
+    <td>Laptop Case</td>
+    <td class="price">Rs. 699.000</td>
+  </tr>
+</table>
+
+</body>
+</html> -->
+
+<!-- Button without using button tag -->
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		
+		div{
+			margin: 100px 100px;
+			border-radius: 5px;
+			width: 90px;
+			height: 30px;
+			text-align: center;
+			align-content: center;
+			background-color: #0165E1;
+		}
+		a{
+			font-family: sans-serif;
+			font-size: 15px;
+			color: white;
+			text-decoration: none;
+		}
+		div:hover{
+			background-color: rgba(1, 101, 225, 0.7);
+		}
+		}
+	</style>
+</head>
+<body>
+	<div><a href="">Login</a></div>
+
+</body>
+</html> -->
+
+<!-- Responsive login page -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+
+		body{
+			
+			font-family: sans-serif;
+		}
+
+		.grad{
+			background: linear-gradient(to bottom,#CDBBDE, #FFD68E);
+			width: 50%;
+			float: left;
+			height: 100vh;
+		}
+
+		.login{
+			background-color: white;
+			width: 50%;
+			float: right;
+			height: 100vh;
+		}
+		#form{
+			
+			display: flex;
+			flex-direction: column;
+			margin: 0 0 0 10% ;
+			justify-content: center;
+			height: 100vh;
+			text-align: left;
+			
+		}
+		input[type="text"]{
+			width: 90%;
+			height: 30px;
+		}
+		input[type="password"]{
+			width: 90%;
+			height: 30px;
+		}
+
+		a{
+			font-size: large;
+			text-decoration: none;
+			color: white;
+			width: 92%;
+			height: 40px;
+			text-align: center;
+			align-content: center;
+			background-color: #FF460D;
+		}
+		a:hover{
+		  	background-color: rgba(255, 106, 27, 0.9);
+		  }
+
+		@media only screen and (max-width: 600px){
+			.grad{
+				display: none;
+			}
+			.login{
+				width: 100%;
+				float: none;
+			}
+			#form{
+				width: 100%;
+				margin: auto;
+				padding-left: 10px;
+		  }
+
+
+	</style>
+</head>
+<body>
+	
+		<div class="grad"></div>
+		<div class="login">
+			<div id="form">
+				<h1 style="color: #D65617;">Login Form</h1>
+			    <label for="mail" style="font-size: 17px;"><b>Email:</b></label><br>
+			    <input type="text" id="mail" name="mail"><br>
+			    <label for="mail" style="font-size: 17px;"><b>Password:</b></label><br>
+			    <input type="Password" name="pw"><br>
+			    <p><input type="checkbox" id="cb"><label for="cb" style="font-weight: 400">Remember me</label></p>
+			    <a href="">Login</a>
+			  </div>
+		</div>
+	
+
+</body>
+</html>

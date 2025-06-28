@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <script>
+
+        function add(m,n){
+            return m+n;
+        }
+
+        function subtract(m,n){
+            return m-n;
+        }
+
+        function multiply(m,n){
+            return m*n;
+        }
+
+        function divide(m,n){
+            return n!==0? m/n:"cannot divide by zero";
+        }
+
+        function calculate(){
+
+        let num1= parseFloat(document.getElementById("num_1").value)
+        let num2= parseFloat(document.getElementById("num_2").value)
+        let operator= document.getElementById("oper").value;
+        
+        console.log("num1", num1)
+        console.log("num2", num2)
+        console.log("op", operator)
+
+        let result;
+        
+        if(isNaN(num1) || isNaN(num2)){
+            result="Enter valid numbers";
+        }
+        else{
+            switch(operator){
+                case "+":
+                    result= add(num1,num2);
+                    break;
+                case "-":
+                    result= subtract(num1,num2);
+                    break;  
+                case "*":
+                    result= multiply(num1,num2);
+                    break;
+                case "/":
+                    result= divide(num1,num2);
+                    break;  
+                default:
+                    result="invalid operator"
+            }
+        }
+        console.log("result", result)
+
+        document.getElementById("output").value=result;
+
+    
+    }
+    </script>
+
+    <style>
+        body{
+                        background-image: url(//th.bing.com/th/id/OIP.VgOqI9P1di9lAOOZVEeEbQHaGY?rs=1&pid=ImgDetMain);
+
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        .calc{
+            /* background-image: url(//th.bing.com/th/id/OIP.VgOqI9P1di9lAOOZVEeEbQHaGY?rs=1&pid=ImgDetMain); */
+            background-color: rgba(14, 13, 13, 0.255);
+            width: 450px;
+            height: 350px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-radius: 15px;
+            border: 1px solid black;
+            gap: 10px;
+            font-size: large;
+            padding: 10px;
+            
+            
+        }
+        input{
+            width:300px;
+            height: 30px;
+            border-radius: 5px;
+            border: .5px solid black;
+            background-color: rgba(255, 255, 255, 0.967);
+            text-align: center;
+        }
+        select{
+            appearance: none;
+            padding-left: 10px;
+        }
+        
+        
+    </style>
+</head>
+<body>
+        <div class="calc">
+            <h2 style="color: rgb(255, 255, 255);">My Calculator</h2>
+
+            <input type="text" placeholder="Enter number 1" id="num_1">
+
+            <select id="oper" style="width:30px; height: 30px; border: .5px solid black; border-radius: 5px; background-color: rgba(255, 255, 255, 0.967);">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+              </select>
+
+            <input type="text" placeholder="Enter number 2" id="num_2">
+
+            <button style="width: 30px; height: 30px; border: .5px solid black; border-radius: 5px; background-color: rgba(255, 255, 255, 0.967);" onclick="calculate()">=</button>
+
+            <input type="text" id="output" placeholder="Solution">
+
+       
+
+        </div>
+    
+
+    
+    
+</body>
+</html>
